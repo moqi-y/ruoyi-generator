@@ -1,37 +1,33 @@
 # ruoyi-generator
 
 #### 介绍
-若依代码生成工具，基于[Ricky/code-generator](https://gitee.com/lpf_project/code-generator)修改，可在本地运行，无需依赖服务器。
 
-#### 软件架构
-软件架构说明
+若依代码生成器，可在本地运行，无需依赖服务器。
 
+#### 项目说明
 
-#### 安装教程
+1. [若依](https://gitee.com/y_project/RuoYi)代码生成器，可在本地运行，无需依赖服务器。 
+2. 修改自[Ricky/code-generator](https://gitee.com/lpf_project/code-generator)，但因为对sqlite表结构有调整，所以无法兼容原项目。
+3. 支持 MySQL、Oracle 数据源，其它未测试。
+4. 支持 [RuoYi v4.7.6](https://gitee.com/y_project/RuoYi/releases/tag/v4.7.6)
+5. 支持 [RuoYi-Vue v3.8.5](https://gitee.com/y_project/RuoYi-Vue/releases/tag/v3.8.5)
+6. 支持 [RuoYi-Vue3 v3.8.5](https://github.com/yangzongzhuan/RuoYi-Vue3/releases/tag/v3.8.5)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 打包方法
 
-#### 使用说明
+1. 手动执行命令： `mvn clean package -Dmaven.test.skip=true -Pprod`
+2. 执行打包脚本： `./bin/win_package.bat` 或 `./bin/linux_mac_package.sh`
+3. 使用 idea 工具中的 Maven 插件，选择 `prod`、`Profiles` 打包
+4. 以上方法三选一即可
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 注意事项
+
+1. 数据库采用sqlite，位置在`src\main\resources\static\sqlite\ruoyi-generator.db`，发布后请将db文件放在jar包的同级sqlite目录中
+2. 将打包后的 jar 包放入 bin 目录，执行 bin 目录下的 `win_start.bat` 或 `linux_mac_start.sh`，可启动代码生成器
 
 #### 参与贡献
+1. Fork 本仓库
+2. 新建 Feat_xxx 分支
+3. 提交代码
+4. 新建 Pull Request
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

@@ -1,0 +1,33 @@
+# 开发环境-配置
+
+# Tomcat配置
+server:
+  # 服务器的HTTP端口，默认为80
+  port: 5063
+  servlet:
+    # 应用的访问路径
+    context-path: /
+
+# Spring配置
+spring:
+  # 模板引擎
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    # 禁用缓存
+    cache: false
+  # 服务模块
+  devtools:
+    restart:
+      # 热部署开关
+      enabled: true
+  # 数据源配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: org.sqlite.JDBC
+    druid:
+      # 主库数据源
+      master:
+        url: jdbc:sqlite::resource:static/sqlite/ruoyi-generator.db
+        username: root
+        password: password
