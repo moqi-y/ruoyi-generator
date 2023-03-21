@@ -89,27 +89,29 @@ public class GenConstants
      * 页面不需要编辑字段
      */
     public static final String[] COLUMNNAME_NOT_EDIT =
-            {"id" , "create_by" , "create_time" , "del_flag" , "timestamp"};
+            {"id" , "create_by" , "create_time" , "update_by" , "update_time" , "del_flag" ,
+             "timestamp"};
 
     /**
      * 页面不需要显示的列表字段
      */
     public static final String[] COLUMNNAME_NOT_LIST =
-            {"id" , "create_by" , "create_time" , "del_flag" , "update_by" , "update_time" ,
+            {"id" , "create_by" , "create_time" , "update_by" , "update_time" , "del_flag" ,
              "timestamp"};
 
     /**
      * 页面不需要查询字段
      */
     public static final String[] COLUMNNAME_NOT_QUERY =
-            {"id" , "create_by" , "create_time" , "del_flag" , "update_by" , "update_time" ,
-             "remark" , "timestamp"};
+            {"id" , "create_by" , "create_time" , "update_by" , "update_time" , "remark" ,
+             "del_flag" , "timestamp"};
 
     /**
      * Entity基类字段
      */
     public static final String[] BASE_ENTITY =
-            {"createBy" , "createTime" , "updateBy" , "updateTime" , "remark"};
+            {"createBy" , "createTime" , "updateBy" , "updateTime" , "remark" , "delFlag" ,
+             "timestamp"};
 
     /**
      * Tree基类字段
