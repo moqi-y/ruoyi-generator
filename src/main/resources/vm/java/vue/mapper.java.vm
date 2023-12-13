@@ -102,5 +102,5 @@ public interface ${ClassName}Mapper
      *
      * @return {@link List}<{@link ${ClassName}}>
      */
-    public List<${ClassName}> selectListByParams(Map<String, String> params);
+    public List<${ClassName}> selectListByParams(Map<String, Object> params);
 }

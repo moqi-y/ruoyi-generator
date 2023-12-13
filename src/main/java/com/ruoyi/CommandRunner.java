@@ -1,8 +1,6 @@
 package com.ruoyi;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
@@ -13,13 +11,13 @@ import org.springframework.stereotype.Component;
  * @author liaocj
  * @date 2023/03/08
  */
+@Slf4j
 @Component
 public class CommandRunner implements CommandLineRunner
 {
-    private static Logger logger = LoggerFactory.getLogger(CommandRunner.class);
+    final Environment environment;
 
-    @Autowired
-    Environment environment;
+    public CommandRunner(Environment environment) {this.environment = environment;}
 
     @Override
     public void run(String... args) throws Exception
@@ -31,9 +29,11 @@ public class CommandRunner implements CommandLineRunner
             openBrowserUrl(url);
         } catch (Exception e)
         {
-            logger.error("打开默认浏览器异常：" + e);
+            log.error("打开默认浏览器异常：" + e);
         }
-        logger.info(url);
+        log.info(url);
+
+        log.info("CommandLineRunner 初始化完成");
     }
 
     /**
@@ -64,7 +64,9 @@ public class CommandRunner implements CommandLineRunner
             // 执行代码，在brower有值后跳出，
             // 这里是如果进程创建成功了，==0是表示正常结束。
             {
-                if (Runtime.getRuntime().exec(new String[]{"which", browsers[count]}).waitFor() == 0)
+                if (Runtime.getRuntime()
+                           .exec(new String[]{"which", browsers[count]})
+                           .waitFor() == 0)
                 {
                     browser = browsers[count];
                 }
@@ -76,7 +78,8 @@ public class CommandRunner implements CommandLineRunner
             else
             {
                 // 这个值在上面已经成功的得到了一个进程。
-                Runtime.getRuntime().exec(new String[]{browser, url});
+                Runtime.getRuntime()
+                       .exec(new String[]{browser, url});
             }
         }
     }

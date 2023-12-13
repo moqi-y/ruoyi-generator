@@ -76,7 +76,7 @@ public interface I${ClassName}Service
      *
      * @return {@link List}<{@link ${ClassName}}>
      */
-    public List<${ClassName}> selectListByParams(Map<String, String> params);
+    public List<${ClassName}> selectListByParams(Map<String, Object> params);
 
     /**
      * 根据 Map集合参数，查询 ${functionName} 信息
@@ -85,6 +85,6 @@ public interface I${ClassName}Service
      *
      * @return {@link ${ClassName}}
      */
-    public ${ClassName} selectByParams(Map<String, String> params);
+    public ${ClassName} selectByParams(Map<String, Object> params);
 
 }

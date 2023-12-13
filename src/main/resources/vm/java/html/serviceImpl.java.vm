@@ -219,7 +219,7 @@ public class ${ClassName}ServiceImpl implements I${ClassName}Service
      * @return {@link List}<{@link ${ClassName}}>
      */
     @Override
-    public List<${ClassName}> selectListByParams(Map<String, String> params) {
+    public List<${ClassName}> selectListByParams(Map<String, Object> params) {
         return  ${className}Mapper.selectListByParams(params);
     }
 
@@ -231,7 +231,7 @@ public class ${ClassName}ServiceImpl implements I${ClassName}Service
      * @return {@link ${ClassName}}
      */
     @Override
-    public ${ClassName} selectByParams(Map<String, String> params) {
+    public ${ClassName} selectByParams(Map<String, Object> params) {
         List<${ClassName}> list = this.selectListByParams(params);
         return !list.isEmpty() ? list.get(0) : null;
     }
