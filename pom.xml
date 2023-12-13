@@ -6,7 +6,7 @@
 
     <groupId>com.ruoyi</groupId>
     <artifactId>ruoyi-generator</artifactId>
-    <version>4.6.0</version>
+    <version>4.7.8</version>
     <packaging>jar</packaging>
 
     <name>ruoyi-generator</name>

@@ -9,9 +9,9 @@
 1. [若依](https://gitee.com/y_project/RuoYi)代码生成器，可在本地运行，无需依赖服务器。 
 2. 修改自[Ricky/code-generator](https://gitee.com/lpf_project/code-generator)，但因为对sqlite表结构有调整，所以无法兼容原项目。
 3. 支持 MySQL、Oracle 数据源，其它未测试。
-4. 支持 [RuoYi v4.7.6](https://gitee.com/y_project/RuoYi/releases/tag/v4.7.6)
-5. 支持 [RuoYi-Vue v3.8.5](https://gitee.com/y_project/RuoYi-Vue/releases/tag/v3.8.5)
-6. 支持 [RuoYi-Vue3 v3.8.5](https://github.com/yangzongzhuan/RuoYi-Vue3/releases/tag/v3.8.5)
+4. 支持 [RuoYi v4.7.8](https://gitee.com/y_project/RuoYi/releases/tag/v4.7.8)
+5. 支持 [RuoYi-Vue v3.8.75](https://gitee.com/y_project/RuoYi-Vue/releases/tag/v3.8.7)
+6. 支持 [RuoYi-Vue3 v3.8.7](https://github.com/yangzongzhuan/RuoYi-Vue3/releases/tag/v3.8.7)
 
 #### 打包方法
 
