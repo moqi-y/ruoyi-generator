@@ -38,6 +38,12 @@
 		var datas = [[${@dict.getType('sys_db_type')}]];
 		var prefix = ctx + "system/dataSource";
 
+		var onDblClickRow = function(row, $element){// table双击事件
+            table.set();
+            var url = table.options.updateUrl.replace("{id}", row.id);
+            $.modal.open("修改 " + table.options.modalName, url);
+        }
+
 		$(function() {
 		    var options = {
 		        url: prefix + "/list",
@@ -54,6 +60,7 @@
 	            showColumns: false,
 		        modalName: "数据源",
 		        rememberSelected:true,
+				onDblClickRow: onDblClickRow,
 				rowStyle: rowStyle,
 		        columns: [{
 		        	field: 'state',
