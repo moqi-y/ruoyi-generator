@@ -25,6 +25,12 @@
 1. 数据库采用sqlite，位置在`src\main\resources\static\sqlite\ruoyi-generator.db`，发布后请将db文件放在jar包的同级sqlite目录中
 2. 将打包后的 jar 包放入 bin 目录，执行 bin 目录下的 `win_start.bat` 或 `linux_mac_start.sh`，可启动代码生成器
 
+## 使用方法
+1、打开`src/main/java/com/ruoyi/RuoYiApplication.java`目录，运行`RuoYiApplication`公共类
+2、再控制台输出中找到页面地址，打开页面，点击页面右上角`数据源`，然后点击列表上方的"增加"按钮增加数据源
+3、新增一个`mysql`数据库，然后将该数据库的相关链接及密码输入，在页面添加数据库连接，数据库连接成功后即可在列表中看到数据源。
+4、在自己新增的`mysql`数据库中新建数据表，然后回到代码生成页面，即可导入该表，实现生成代码
+
 #### 参与贡献
 1. Fork 本仓库
 2. 新建 Feat_xxx 分支
