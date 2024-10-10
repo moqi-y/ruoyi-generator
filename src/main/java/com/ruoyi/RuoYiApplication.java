@@ -15,6 +15,6 @@ public class RuoYiApplication
     {
         // System.setProperty("spring.devtools.restart.enabled", "false");
         SpringApplication.run(RuoYiApplication.class, args);
-        System.out.println("若依代码生成器启动成功 ");
+        System.out.println("若依代码生成器启动成功: http://localhost:5064/ ");
     }
 }
